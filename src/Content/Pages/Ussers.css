@@ -1,0 +1,135 @@
+.titleUsers{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.infoTxt{
+    color: var(--infoColorRed);
+    width: 100%;
+    text-align: center;
+}
+
+.userCardsPart{
+    border: 3px solid var(--borderFirst);
+    box-shadow: 0px 0px 5px var(--borderFirst);
+    background: var(--backgroundFirst);
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px 10px;
+    margin: 10px auto;
+}
+
+.singleUserCart{
+    height: 200px;
+    width: 400px;
+    border: 2px solid var(--borderCards);
+    background: var(--backgroundCards);
+    border-radius: 5px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-areas: 
+    "top top top top"
+    "leftBox leftBox rightBox rightBox";
+}
+
+.topCart{
+    grid-area: top;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delBtnCart{
+    border: 2px solid var(--btnRed);
+    background: var(--btnWhite);
+    color: var(--btnRed);
+    border-radius: 5px;
+    height: 30px;
+    transition: 0.7s;
+}
+
+.delBtnCart:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+
+.leftBox{
+    grid-area: leftBox;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-left: 10px;
+}
+
+.rightBox{
+    grid-area: rightBox;
+    text-align: center;
+}
+
+.ramkabtnNo{
+    border:solid 3px var(--btnRed);
+    background: var(--justWhite);
+    border-radius: 20px;
+    width: 100px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+.ramkabtnNo::after{
+    content: "";
+    border: solid var(--btnRed) 1px;
+    background: var(--btnRed);
+    position: absolute;
+    height: 24px;
+    width: 35px;
+    border-radius: 20px;
+    top: 3px;
+    left: 3px;
+    transition: 1s;
+}
+.ramkabtnYes{
+    border:solid 3px var(--btnGreen);
+    border-radius: 20px;
+    background: var(--justWhite);
+    width: 100px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+.ramkabtnYes::after{
+    content: "";
+    border: solid var(--btnGreen) 1px;
+    background: var(--btnGreen);
+    position: absolute;
+    height: 24px;
+    width: 35px;
+    border-radius: 20px;
+    top: 3px;
+    left: 54px;
+    transition: 1s;
+}
+
+.ramkabtnNo div{
+    height: 24px;
+    width: 30px;
+    margin: 2px;
+}
+
+.ramkabtnYes div{
+    height: 24px;
+    width: 30px;
+    margin: 2px;
+}

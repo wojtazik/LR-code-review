@@ -1,0 +1,120 @@
+@import "../.././colors.css" ;
+
+.loginPage{
+    background: var(--backgroundModals) ;
+    border: 3px solid var(--borderModals);
+    width: 450px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 80px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-rows: 50px 250px;
+    grid-template-areas: 
+    "heading heading heading "
+    "leftPart leftPart rightPart";
+}
+
+.loginEscBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--btnRed)	;
+    color: var(--btnRed);
+    background: var(--btnWhite);
+    border-radius: 5px;
+    height: 25px;
+    width: 25px; 
+    transition: 0.7s;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+
+.loginEscBtn:hover{
+    color: var(--btnWhite);
+    background: var(--btnRed);
+}
+
+.heading{
+    grid-area: heading;
+    margin: 5px auto;
+}
+
+.loginLeftPart{
+    grid-area: leftPart;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 30px 30px 30px 30px 30px;
+    grid-area: 5px;
+    justify-content: center;
+}
+
+.loginLeftPart button{
+    background: var(--btnWhite);
+    border:2px solid var(--btnGreen);
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    margin: auto;
+    color: var(--btnGreen);
+    transition: 0.7s;
+}
+
+.loginLeftPart button:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.loginRightPart{
+    grid-area: rightPart;
+    padding-left: 10px;
+    border-left: var(--borderModals) 2px solid;
+    margin-bottom: 10px;
+}
+.loginRightPart div{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.loginRightPart button{
+    margin-top: 90px;
+    width: 150px;
+    height: 30px;
+    border:2px solid var(--btnBlue);
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+    border-radius: 5px;
+    transition: 0.7s;
+}
+.loginRightPart button:hover{
+    background: var(--btnWhite);
+    color: var(--btnBlue);
+    transition: 0.7s;
+}
+
+.loginLeftPart div{
+    font-size: 12px;
+    color: var(--infoColorRed)  ;
+}
+
+:root{
+    --nickInfo:var(--inputAndInputBtn);
+    --passInfo:var(--inputAndInputBtn);
+}
+
+.loginInpNick{
+    border: 1px solid var(--nickInfo);
+    border-radius: 5px;
+    background:var(--inputAndInputBtnBackground); 
+}
+
+.loginInpPass{
+    border: 1px solid var(--passInfo);
+    border-radius: 5px;
+    background:var(--inputAndInputBtnBackground); 
+}

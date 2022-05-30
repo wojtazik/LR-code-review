@@ -1,0 +1,114 @@
+@import "../.././colors.css" ;
+
+:root{
+    --fontColor:var(--infoColorRed);
+    --borderNickColor:var(--inputAndInputBtn);
+    --borderPassColor:var(--inputAndInputBtn);
+}
+
+.regBody{
+    width: 450px;
+    height: 300px;
+    background: var(--backgroundModals);
+    border:3px solid var(--borderModals);
+    margin: 80px auto;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.regEscBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--btnRed)	;
+    color: var(--btnRed)	;
+    background: var(--btnWhite);
+    border-radius: 5px;
+    height: 25px;
+    width: 25px; 
+    transition: 0.7s;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+.regEscBtn:hover{
+    background: var(--btnRed)	;
+    color: var(--btnWhite);
+}
+
+.regBody h2{
+    border-bottom: var(--borderModals) 2px solid;
+    width: 350px;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.inputsPart{
+    padding: 5px;
+    margin: 50px auto 25px auto;
+    width: 400px;
+    display: grid;
+    column-gap: 5px;
+    grid-template-areas:
+    "nickTxt nickInp"
+    ". nickInfo"
+    "passTxt passInp"
+    ". passInfo"
+}
+.nickTxt{
+    grid-area: nickTxt;
+    text-align: end;
+}
+
+.nickInp{
+    grid-area: nickInp;
+    height: 30px;
+    border: 1px solid var(--borderNickColor);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+.nickInfo{
+    grid-area: nickInfo;
+    font-size: 12px;
+    text-align: left;
+    height: 10px;
+    color: var(--infoColorRed) ;
+}
+
+.passTxt{
+    grid-area: passTxt;
+    text-align: end;
+    margin-top: 20px;
+}
+
+.passInp{
+    grid-area: passInp;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid var(--borderPassColor);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+
+.passInfo{
+    grid-area: passInfo;
+    font-size: 12px;
+    text-align: left;
+    height: 10px;
+    color: var(--fontColor);
+
+}
+
+.createBtn{
+    border: 2px solid var(--btnGreen);
+    border-radius: 5px;
+    background: var(--btnWhite);
+    color: var(--btnGreen);
+    transition: 0.7s;
+}
+
+.createBtn:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+}

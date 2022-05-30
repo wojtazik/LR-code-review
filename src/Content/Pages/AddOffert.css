@@ -1,0 +1,417 @@
+@import "../.././colors.css" ;
+
+.loadingPage{
+    display: block;
+    margin: 50px auto;
+}
+
+.bodyAddChange{
+    position: relative;
+    margin-top: 30px;
+}
+/* ================================================= */
+.categoriesPart{
+    border-top:3px solid var(--borderSecond);
+    border-right: 3px solid var(--borderSecond);
+    border-bottom: 3px solid var(--borderSecond);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 5px var(--borderSecond);
+    background: var(--backgroundSecond);
+    text-align: center;
+    width: 400px;
+}
+
+.addNewCategories{
+    padding: 5px;
+}
+
+.addNewCategories input{
+    border: 1px solid var(--inputAndInputBtn);
+    background: var(--inputAndInputBtnBackground);
+    border-radius: 5px;
+}
+.nameLength{
+    font-size: 10px;
+}
+
+.addNewCatBtn{
+    border: 2px solid var(--btnGreen);
+    border-radius: 5px;
+    height: 35px;
+    width: 250px;
+    margin: 5px auto;
+    color: var(--btnGreen);
+    background: var(--btnWhite);
+    cursor: pointer;
+    transition: 0.7s;
+}
+.addNewCatBtnGrey{
+    border: 2px solid var(--btnGrey);
+    border-radius: 5px;
+    height: 35px;
+    width: 250px;
+    margin: 5px auto;
+    color: var(--btnGrey);
+    background: var(--btnWhite);
+    cursor: pointer;
+    transition:0.7s
+}
+.addNewCatBtn:hover{
+    color: var(--btnWhite);
+    background: var(--btnGreen);
+    transition: 0.7s;
+}
+
+.singleCat{
+    border-top:2px solid var(--borderSecond);
+    padding: 5px; 
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+
+.singleCatRenameBtn{
+    min-width: 110px;
+    height: 30px;
+    border:var(--btnBlue) 2px solid;
+    background: var(--btnWhite);
+    color: var(--btnBlue);
+    border-radius: 5px;
+    transition: 0.7s;
+}
+.singleCatRenameBtn:hover{
+    background:var(--btnBlue);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.singleCatDelBtn{
+    min-width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    border:2px solid var(--btnRed);
+    color:var(--btnRed);
+    transition: 0.7s;
+}
+.singleCatDelBtn:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.singleCatDelBtnGrey{
+    min-width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    border:2px solid var(--btnGrey);
+    color: var(--btnGrey)
+}
+
+/* ================================================= */
+/* ================================================= */
+
+.offertsPart{
+    border-top: 3px var(--borderFirst) solid;
+    border-left: 3px var(--borderFirst) solid;
+    border-bottom: 3px var(--borderFirst) solid;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 0 5px var(--borderFirst);
+    background: var(--backgroundFirst);
+    margin-top: 20px;
+    padding: 50px 0;
+    width: 95%;
+    margin-left: 5%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+}
+
+
+.addNew{
+    position: absolute;
+    border-bottom: 1px solid var(--borderFirst);
+    border-left: 1px solid var(--borderFirst);
+    border-right: 1px solid var(--borderFirst);
+    box-shadow: 0 0 5px var(--borderFirst);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    display: block;
+    justify-content: space-around;
+    background: var(--borderFirst);
+    left: 30px;
+}
+
+.addNew button{
+    border: 2px solid var(--borderFirst);
+    background: var(--btnWhite);
+    margin: auto;
+    border-radius: 5px;
+    transition: 0.7s;
+    color: var(--borderFirst);
+}
+.addNew button:hover{
+    background: var(--borderFirst);
+    border: var(--btnWhite) 2px solid;
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+/* ================================================================= */
+.catSet{
+    position:absolute;
+    cursor: pointer;
+    left: 180px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 5px var(--borderFirst);
+    border-bottom: 1px solid var(--borderFirst);
+    border-left: 1px solid var(--borderFirst);
+    border-right: 1px solid var(--borderFirst);
+    background: var(--borderFirst);
+}
+.catSetBtn{
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    border: 2px solid var(--borderFirst);
+    color: var(--borderFirst);
+}
+
+
+.catSet:hover .catSetMenu{
+    display: flex;
+}
+.catSetMenu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top:36px;
+    left: 50px;
+    background: var(--borderFirst);
+    padding: 5px;
+    width: 180px;
+    font-size: 14px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid var(--borderFirst);
+    border-left: 1px solid var(--borderFirst);
+    border-right: 1px solid var(--borderFirst);
+}
+.catSetMenu button{
+    text-align: center;
+    border: var(--btnWhite) 2px solid;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    color: var(--borderFirst);
+    margin: 2px;
+    padding: 3px;
+    transition: 0.7s;
+}
+
+.catSetMenu button:hover{
+    cursor: pointer;
+    background: var(--borderFirst);
+    color:var(--btnWhite);
+    transition: 0.7s;
+}
+/* ============================================================================================= */
+
+.singleStuffCard{
+    border-top: 2px var(--borderCards) solid;
+    border-left: 2px var(--borderCards) solid;
+    border-bottom: 2px var(--borderCards) solid;
+    background: var(--backgroundCards);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 95%;
+    right: 0;
+    display: grid;
+    justify-self: end;
+    grid-template-columns: 20px 100px;
+    grid-template-rows: 40px 55px;
+    grid-template-areas: 
+    "info img title"
+    "info img infoDiv";
+    transition: 1s;
+}
+
+.singleStuffCard:hover{
+    width: 97%;
+    transition: 1s;
+}
+
+.valueColor0{
+    grid-area: info;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: var(--infoColorGrey);
+}
+.valueColorLow{
+    grid-area: info;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: var(--infoColorRed);
+}
+.valueColorMid{
+    grid-area: info;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: var(--infoColorYellow);
+}
+.valueColorHigh{
+    grid-area: info;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: var(--infoColorGreen);
+}
+
+.singleStuffCard img{
+    grid-area: img;
+    max-height: 100%;
+    height: auto;
+    max-width: 100px;
+    object-fit: contain;
+}
+.cardTitle{
+    grid-area: title;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoDiv{
+    grid-area: infoDiv;
+    display: grid;
+    grid-template-columns: 130px 100px 90px 130px 130px 130px;
+    column-gap: 5px;
+    border-top:  2px var(--borderCards) solid;
+    border-left:  2px var(--borderCards) solid;
+    background: var(--backgroundCards);
+    border-top-left-radius: 5px;
+    margin: 5px 0px 0px 5px;
+    padding-right: 10px;
+    justify-content: center;
+}
+.infoDiv{
+    text-align: center;
+}
+
+.infoDiv h5{
+    font-size: 12px;
+}
+.infoDiv button{
+    margin-top: 10px;
+}
+
+
+.detailsBtn{
+    height: 30px;
+    border:var(--btnGreen) 2px solid;
+    background:var(--btnWhite);
+    color: var(--btnGreen);
+    border-radius: 5px;
+    transition: 0.7s;
+}
+.detailsBtn:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+.changeBtn{
+    height: 30px;
+    border:var(--btnBlue) 2px solid;
+    background: var(--btnWhite);
+    color: var(--btnBlue);
+    border-radius: 5px;
+    transition: 0.7s;    
+}
+.changeBtn:hover{
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.delBtn{
+    height: 30px;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    border:2px solid var(--btnRed);
+    color:var(--btnRed);
+    transition: 0.7s;
+}
+.delBtn:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}
+
+@media (max-width: 1000px){
+
+    .singleStuffCard{
+        grid-template-columns: 20px 100px;
+        grid-template-rows: 40px 100px;
+        text-align: center;
+    }
+
+    .infoDiv{
+        grid-template-columns: 130px 130px 130px;
+        grid-template-rows: 50px 50px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .singleStuffCard{
+        display: grid;
+        grid-template-columns: 20px 100px;
+        grid-template-rows: 70px 150px;
+        grid-template-areas: 
+        "info img title"
+        "info img infoDiv";
+        text-align: center;
+    }
+
+    .infoDiv{
+        grid-template-columns: 130px 130px;
+        grid-template-rows: 50px 50px 50px;
+        grid-template-areas: 
+        "cat deta"
+        "price change"
+        "value del";
+    }
+
+
+    .infoCat{
+        grid-area: cat;
+    }
+
+    .infoPrice{
+        grid-area: price;
+    }
+
+    .infoValue{
+        grid-area: value;
+    }   
+    
+    .changeBtn{
+        grid-area: change
+    }
+    .delBtn{
+        grid-area: del
+    }
+    .detailsBtn{
+        grid-area: deta;
+    }
+}
+

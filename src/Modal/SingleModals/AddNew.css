@@ -1,0 +1,218 @@
+@import "../.././colors.css" ;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.bodyNewOffert textarea{
+    resize: none;
+}
+:root{
+    --descBorder:var(--infoColorRed);
+    --titleBorder:var(--infoColorRed);
+    --imgLinkBorder:var(--infoColorRed);
+    --catBorder:var(--infoColorRed);
+}
+
+.bodyNewOffert{
+    background: var(--backgroundModals);
+    border: 3px solid var(--borderModals);
+    border-radius: 5px;
+    width: 480px;
+
+    margin: 100px auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25px 120px 40 220px 50px 50px 50px;
+    row-gap: 5px;
+    grid-template-areas:
+    "top top"
+    "img photo"
+    "title title"
+    "desc desc"
+    "cat price"
+    ". value"
+    "btnAccept btnCancel"
+    ;
+}
+
+.newOffTop{
+    grid-area: top;
+    background: var(--borderModals);
+    padding:5px
+}
+
+.h2{
+    margin: 5px auto;
+    
+}
+
+.bodyNewOffert img{
+    grid-area: img;
+    max-height: 120px;
+    max-width: 120px;
+}
+
+.newPhoto input{
+    background: var(--inputAndInputBtnBackground);
+    border:2px solid var(--imgLinkBorder);
+    border-radius: 5px;
+}
+
+
+.newPhoto{
+    grid-area: photo;
+}
+
+
+.newTitle{
+    grid-area: title;
+}
+
+.newTitle textarea{
+    width: 400px;
+    border:2px solid var(--titleBorder);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+
+.newDesc{
+    grid-area: desc;
+}
+
+
+
+.newDesc textarea{
+    width: 400px;
+    height: 150px;
+    border:2px solid var(--descBorder);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+
+.newCatList{
+    grid-area: cat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newPrice{
+    grid-area: price;
+}
+.newPrice input{
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid var(--inputAndInputBtn);
+    background: var(--inputAndInputBtnBackground);
+    box-shadow: none;
+}
+
+.newValue{
+    grid-area: value;
+}
+
+.newValue input{
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid var(--inputAndInputBtn);
+    background: var(--inputAndInputBtnBackground);
+    box-shadow: none;
+}
+
+.newBtnAcceptOff{
+    grid-area: btnAccept;
+    margin: 10px auto;
+    background: var(--btnWhite);
+    border: 2px var(--btnGrey) solid;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--btnGrey);
+}
+
+.newBtnAccept{
+    grid-area: btnAccept;
+    margin: 10px auto;
+    background: var(--btnWhite);
+    border: 2px var(--btnGreen) solid;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--btnGreen);
+    transition: 0.7s;
+}
+
+.newBtnAccept:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+}
+
+.newBtnCancel{
+    grid-area: btnCancel;
+    margin: 10px auto;
+    background: var(--btnWhite);
+    border: 2px var(--btnRed) solid;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--btnRed);
+    transition: 0.7s;
+}
+
+.newBtnCancel:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+.catSetNew{
+    display: flex;
+    width: 132px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.catSetBtnNew{
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    border: 2px solid rgb(71, 152, 163);
+    color: rgb(71, 152, 163);
+}
+
+
+.catSetNew:hover .catSetMenuNew{
+    display: flex;
+}
+.catSetMenuNew{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    left: 183px;
+    bottom: 0px;
+    background: var(--btnBlue);
+    padding: 5px;
+    width: 180px;
+    font-size: 14px;
+    border: 1px solid var(--btnBlue);
+    border-radius: 5px;
+}
+.catSetMenuNew button{
+    text-align: center;
+    border: var(--btnWhite) 1px solid;
+    border-radius: 5px;
+    background: var(--btnWhite);
+    color: var(--btnBlue);
+    margin: 2px;
+    padding: 3px;
+    transition: 0.7s;
+}
+
+.catSetMenuNew button:hover{
+    cursor: pointer;
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+    transition: 0.7s;
+}

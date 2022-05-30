@@ -1,0 +1,20 @@
+
+@import "../.././colors.css" ;
+
+.BuyThx{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    background: var(--backgroundModals);
+    border:3px solid var(--borderModals);
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+.BuyThx img{
+    margin-top: 20px;
+}

@@ -1,0 +1,853 @@
+@import "../.././colors.css" ;
+
+
+
+.colorsBody{
+    padding: 30px 30px;
+    margin: 0px auto;
+    width: 1500px;
+    display: grid;
+    grid-template-columns: 450px 900px;
+    row-gap: 20px;
+    grid-template-areas: 
+    "title title"
+    "saveReset saveReset"
+    "btns  btns"
+    "picker screenModel";
+    justify-content: space-between;
+}
+
+.colorstitle{
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.changeResetColors{
+    grid-area: saveReset;
+    display: flex;
+    justify-content: space-around;
+}
+
+.saveNewColors{
+    grid-area: save;
+    border: 2px solid var(--btnGreen);
+    border-radius: 5px;
+    color:var(--btnGreen);
+    background: var(--btnWhite);
+    width: 250px;
+    height: 50px;
+    transition: 0.7s;
+}
+.saveNewColors:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+}
+.saveNewColorsOff{
+    grid-area: save;
+    border: 2px solid var(--btnGrey);
+    border-radius: 5px;
+    color:var(--btnGrey);
+    background: var(--btnWhite);
+    width: 250px;
+    height: 50px;
+    cursor: default;
+}
+
+.resetNewColors{
+    grid-area: reset;
+    background: var(--btnWhite);
+    border:2px solid var(--btnRed);
+    border-radius: 5px;
+    color:var(--btnRed);
+    width: 250px;
+    transition: 0.7s;
+}
+.resetNewColors:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+
+
+.changeColors{
+    grid-area: btns;
+    padding: 5px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    background: var(--backgroundFirst);
+    border:2px solid var(--borderFirst)
+}
+    .changeColors button{
+        border-radius: 5px;
+        border: 2px solid var(--btnBlue);
+        background: var(--btnWhite);
+        transition: 0.7s;
+    }
+    .changeColors button:hover{
+        background: var(--btnBlue); 
+        transition: 0.7s;
+    }
+
+
+.colorGroup{
+    border: 2px solid var(--borderThird);
+    border-radius: 5px;
+    background: var(--backgroundThird);
+    padding:5px;
+    row-gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================Btns============= */
+    .changeBtnGreen{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;    
+    }
+
+    .changeBtnGreenColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--btnGreenMin);
+    }
+    
+    .changeBtnRed{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBtnRedColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--btnRedMin);
+    }
+
+    .changeBtnBlue{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBtnBlueColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--btnBlueMin);
+    }
+
+    .changeBtnGrey{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBtnGreyColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--btnGreyMin);
+    }
+
+    .changeBtnWhite{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBtnWhiteColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--btnWhiteMin);
+    }
+/* ===================Btns============= */
+/* ==================Border============ */
+    .changeBorderFirst{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBorderFirstColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--borderFirstMin);
+    }
+    .changeBorderSecond{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBorderSecondColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--borderSecondMin);
+    }
+    .changeBorderThird{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBorderThirdColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--borderThirdMin);
+    }
+
+    .changeBorderCards{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBorderCardsColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--borderCardsMin);
+    }
+
+    .changeBorderModals{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBorderModalsColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--borderModalsMin);
+    }
+/* ==================Border============ */
+/* ================Background========== */
+    .changeBackgroundFirst{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBackgroundFirstColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--backgroundFirstMin);
+    }
+    .changeBackgroundSecond{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBackgroundSecondColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--backgroundSecondMin);
+    }
+    .changeBackgroundThird{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBackgroundThirdColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--backgroundThirdMin);
+    }
+
+    .changeBackgroundCards{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBackgroundCardsColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--backgroundCardsMin);
+    }
+    .changeBackgroundModals{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeBackgroundModalsColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--backgroundModalsMin);
+    }
+/* ================Background========== */
+/* ================InfoColors========== */
+    .changeInfoRed{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInfoRedColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--infoColorRedMin);
+    }
+
+    .changeInfoYellow{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInfoYellowColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--infoColorYellowMin);
+    }
+
+    .changeInfoGreen{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInfoGreenColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--infoColorGreenMin);
+    }
+
+    .changeInfoGrey{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInfoGreyColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--infoColorGreyMin);
+    }
+    .changeInfoBlack{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInfoBlackColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--infoColorBlackMin);
+    }
+/* ================InfoColors========== */
+/* =================Others============= */
+    .changePage{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changePageColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--appBackgroundColorMin);
+    }
+    .changeFont{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeFontColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--appFontColorMin);
+    }
+    .changeInputBorder{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInputBorderColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--inputAndInputBtnMin);
+    }
+    .changeInputBackground{
+        display: flex;
+        background: var(--backgroundCards);
+        padding: 3px;
+        border-radius: 5px;
+        column-gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .changeInputBackgroundColor{
+        height: 30px;
+        width: 30px;
+        border: var(--borderCards) 1px solid;
+        border-radius: 5px;
+        background: var(--inputAndInputBtnBackgroundMin);
+    }
+
+/* =================Others============= */
+
+.picker{
+    border: 3px solid var(--borderSecond);
+    border-radius: 5px;
+    background: var(--backgroundSecond);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0px auto;
+    width: 400px;
+    text-align: center;
+    align-items: center;
+}
+    .pickerTxt{
+        border: 2px solid var(--borderThird);
+        border-radius: 5px;
+        background: var(--backgroundThird);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pickerTxt div{
+        border: 2px solid var(--borderCards);
+        border-radius: 5px;
+        background: var(--backgroundCards);
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+/* monitor model */
+
+.monitorTitle{
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.screenModel{
+    grid-area: screenModel;
+}
+
+.monitor{
+    border: 3px rgb(67, 67, 67) solid;
+    border-bottom: 30px solid rgb(67, 67, 67);
+    border-radius: 3px;
+    margin: 0px auto;
+}
+
+
+
+.screen{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "second first"
+    "third first"
+    "modal first";
+    background: var(--appBackgroundColorMin);
+    border: 5px solid black;
+    min-height: 100%;
+    padding-bottom: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    color: var(--appFontColorMin);
+}
+   
+    .miniScreenCard{
+        width: 80%;
+        height: 40px;
+        border: 2px solid var(--borderCardsMin);
+        border-radius: 5px;
+        background: var(--backgroundCardsMin);
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .miniScreenBtns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+    }
+        .miniScreenBtns button{
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+            transition: 0.5s;
+            margin: 5px auto;
+        }
+
+        .miniBtnAccept{
+            border: 2px solid var(--btnGreenMin);
+            color:var(--btnGreenMin);
+            background:var(--btnWhiteMin);
+        }
+            .miniBtnAccept:hover{
+                color:var(--btnWhiteMin);
+                background:var(--btnGreenMin);
+            }
+
+        .miniBtnCancel{
+            border: 2px solid var(--btnRedMin);
+            color:var(--btnRedMin);
+            background:var(--btnWhiteMin);      
+        }
+            .miniBtnCancel:hover{
+                color:var(--btnWhiteMin);
+                background:var(--btnRedMin);           
+            }
+
+        .miniBtnChange{
+            border: 2px solid var(--btnBlueMin);
+            color: var(--btnBlueMin);
+            background: var(--btnWhiteMin);
+        }
+            .miniBtnChange:hover{
+                color:var(--btnWhiteMin);
+                background:var(--btnBlueMin);           
+            }
+        .miniBtnGrey{
+            border: 2px solid var(--btnGreyMin);
+            color: var(--btnGreyMin);
+            background: var(--btnWhiteMin);            
+        }
+
+    .navBarMini{
+        grid-area: nav;
+        background: #f7f7f7;
+        height: 40px;
+        display: flex;
+        column-width: 1fr 3fr 1fr;
+        align-items: center;
+        row-gap: 20px;
+        padding: 0px 10px;
+        color: black;
+    }
+
+        .navBarMiniLogo{
+            flex-grow: 0.5;
+        }
+
+        .navBarMiniBtns{
+            display: flex;
+            justify-content: start;
+            column-gap: 10px;
+            flex-grow: 3;
+        }
+        .navBarMiniLogin{
+            justify-content: end;
+            display: flex;
+            border: 1px solid var(--btnRedMin);
+            border-radius: 5px;
+            padding: 3px;
+            color:var(--btnRedMin) ;
+        }
+
+    .firstContainer{
+        grid-area: first;
+        border: 3px solid var(--borderFirstMin);
+        background: var(--backgroundFirstMin);
+        border-radius: 5px;
+        text-align: center;
+        margin: 0px 5px;
+
+    }
+        .miniScreenCardBtns{
+            width: 80%;
+            height: 120px;
+            border: 2px solid var(--borderCardsMin);
+            border-radius: 5px;
+            background: var(--backgroundCardsMin);
+            margin: 5px auto;
+            text-align: center;
+        }
+
+    .secondContainer{
+        grid-area: second;
+        background: var(--backgroundSecondMin);
+        border: 3px solid var(--borderSecondMin);
+        border-radius: 5px;
+        text-align: center;
+        margin: 0px 5px;
+    }
+
+
+    .thirdContainer{
+        grid-area: third;
+        border: 3px solid var(--borderThirdMin);
+        border-radius: 5px;
+        background: var(--backgroundThirdMin);
+        text-align: center;
+        margin: 0px 5px;
+    }
+
+    .modalContainer{
+        grid-area: modal;
+        border: 3px solid var(--borderModalsMin);
+        border-radius: 5px;
+        background: var(--backgroundModalsMin);
+        padding: 5px;
+        text-align: center;
+        margin: 0px 5px;
+    }
+        .miniScreenInp{
+            border-radius: 5px;
+            border: 1px solid var(--inputAndInputBtnMin);
+            background: var(--inputAndInputBtnBackgroundMin);
+            margin-left: 15px;
+        }
+        .miniScreenInfoColors{
+            display: flex;
+            justify-content: space-around;
+            row-gap: 5px;
+            font-size: 12px;
+        }
+            .miniScreenInfoRed{
+                color: var(--infoColorRedMin);
+            }
+            .miniScreenInfoYellow{
+                color: var(--infoColorYellowMin);
+            }
+            .miniScreenInfoGreen{
+                color: var(--infoColorGreenMin);
+            }
+            .miniScreenInfoGrey{
+                color: var(--infoColorGreyMin);
+            }
+            .miniScreenInfoBlack{
+                color: var(--infoColorBlackMin);
+            }
+
+
+@media (max-width: 1520px){
+
+        .colorsBody{
+            padding: 30px 30px;
+            margin: 0px auto;
+            width: 1000px;
+            display: grid;
+            grid-template-columns: 900px;
+            row-gap: 20px;
+            grid-template-areas: 
+            "title title"
+            "saveReset saveReset"
+            "btns  btns"
+            "picker picker"
+            "screenModel screenModel";
+            justify-content: space-between;
+        }        
+}
+
+@media (max-width: 1020px){
+
+
+        .colorsBody{
+            padding: 30px 5px;
+            margin: 0px auto;
+            width: 480px;
+            display: grid;
+            grid-template-columns: 450px;
+            row-gap: 20px;
+            grid-template-areas: 
+            "title title"
+            "saveReset saveReset"
+            "btns  btns"
+            "picker picker"
+            "screenModel screenModel";
+            justify-content: space-between;
+        }  
+
+        .screen{
+            display: grid;
+            grid-template-areas: 
+            "nav"
+            "first"
+            "second "
+            "third "
+            "modal ";
+            background: var(--appBackgroundColorMin);
+            min-height: 100%;
+            padding-bottom: 10px;
+            row-gap: 10px;
+            column-gap: 10px;
+            color: var(--appFontColorMin);
+        }
+
+        .saveNewColors{
+            grid-area: save;
+            border: 2px solid var(--btnGreen);
+            border-radius: 5px;
+            color:var(--btnGreen);
+            background: var(--btnWhite);
+            width: 160px;
+            height: 80px;
+            transition: 0.7s;
+        }
+
+        .saveNewColorsOff{
+            grid-area: save;
+            border: 2px solid var(--btnGrey);
+            border-radius: 5px;
+            color:var(--btnGrey);
+            background: var(--btnWhite);
+            width: 160px;
+            height: 80px;
+            cursor: default;
+        }
+
+        .resetNewColors{
+            grid-area: reset;
+            background: var(--btnWhite);
+            border:2px solid var(--btnRed);
+            border-radius: 5px;
+            color:var(--btnRed);
+            width: 160px;
+            height: 80px;
+            transition: 0.7s;
+        }
+
+}

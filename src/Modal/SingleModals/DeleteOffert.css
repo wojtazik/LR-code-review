@@ -1,0 +1,52 @@
+@import "../.././colors.css" ;
+
+.delOffertBody{
+    margin: 100px auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid var(--borderModals);
+    background: var(--backgroundModals);
+    text-align: center;
+}
+
+.delOffertBody h3{
+    border-bottom: 3px var(--btnRed) solid;
+    padding-bottom: 5px;
+}
+
+.delOffertBody div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.delItemBtn{
+    margin: 10px auto;
+    background: var(--btnWhite);
+    border: 2px var(--btnRed) solid;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--btnRed);
+    transition: 0.7s;
+}
+
+.delItemBtn:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+.cancelItemBtn{
+    margin: 10px auto;
+    background: var(--btnWhite);
+    border: 2px var(--btnBlue) solid;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--btnBlue);
+    transition: 0.7s;
+}
+
+.cancelItemBtn:hover{
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+}

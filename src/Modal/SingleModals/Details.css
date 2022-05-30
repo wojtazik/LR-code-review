@@ -1,0 +1,180 @@
+@import "../.././colors.css" ;
+
+.detailsPage{
+    position: relative;
+    margin: 100px auto;
+    width: 700px;
+    max-height: 600px;
+    background: var(--backgroundModals);
+    border:3px solid var(--borderModals);
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row: 5px;
+    grid-template-areas: 
+    " photo photo photo title title title title"
+    " photo photo photo description description description description "
+    " valueInfo valueInfo valueInfo description description description description"
+    "price price price description description description description"
+    "btn btn btn description description description description";
+}
+@media (max-width: 750px){
+    .detailsPage{
+    position: relative;
+    margin: 50px auto;
+    width: 480px;
+    max-height: 700px;
+    background: var(--backgroundModals)  ;
+    border:3px solid var(--borderModals);
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    " photo "
+    "title"
+    "description"
+    "valueInfo"
+    "price"
+    "btn"
+}
+
+}
+
+
+.detailsEscBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--btnRed)	;
+    color: var(--btnRed)	;
+    background: var(--btnWhite);
+    border-radius: 5px;
+    height: 25px;
+    width: 25px; 
+    transition: 0.7s;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+.detailsEscBtn:hover{
+    
+    color: var(--btnWhite);
+    background: var(--btnRed)	;
+}
+
+.detailsPhoto{
+    grid-area: photo;
+    text-align: center;
+
+} 
+.detailsPage img{
+    width: 70%;
+    height: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.detailsTitle{
+    grid-area: title;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 25px 5px 0px
+}
+
+.detailsDescription{
+    grid-area:description ;
+    margin: 5px;   
+    font-size: 12px;
+}
+ .detailsDescription:first-letter { text-transform: uppercase; }
+.detailsPrice{
+    grid-area: price;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.valueInfo0{
+    grid-area: valueInfo;
+    border: var(--infoColorGrey) 2px solid;
+    color: var(--infoColorGrey);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+}
+.valueInfoLittle{
+    grid-area: valueInfo;
+    border: var(--infoColorRed) 2px solid;
+    color: var(--infoColorRed);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+
+}
+.valueInfoAverage{
+    grid-area: valueInfo;
+    border: 2px solid var(--infoColorYellow);
+    color: var(--infoColorYellow);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+
+}
+.valueInfoHigh{
+    grid-area: valueInfo;
+    border: solid 2px var(--infoColorGreen) ;
+    color: var(--infoColorGreen);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+}
+
+.detailsBuyBtnOff{
+    grid-area: btn;
+    border: 2px solid var(--btnGrey);
+    border-radius: 5px;
+    height: 35px;
+    margin: 5px auto;
+    color: var(--btnGrey);
+    background: white;
+}
+.detailsBuyBtnOn{
+    grid-area: btn;
+    border: 2px solid var(--btnGreen);
+    border-radius: 5px;
+    height: 35px;
+    margin: 5px auto;
+    color: var(--btnGreen);
+    background: var(--btnWhite);
+    transition: 0.5s;
+}
+
+.detailsBuyBtnOn:hover{
+    color: var(--btnWhite);
+    background: var(--btnGreen);
+    transition: 0.5s;
+}

@@ -1,0 +1,519 @@
+
+.btnsDiv{
+    display: flex;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    margin: 10px;
+    grid-area: btnsDiv;
+}
+
+.saveBtn{
+    height: 30px;
+    background: var(--btnWhite);
+    border: 2px solid var(--btnGreen);
+    color: var(--btnGreen);
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.saveBtn:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+}
+
+.cancelBtn{
+    grid-area: btnCancel;
+    border-radius: 5px;
+    height: 30px;
+    background: var(--btnWhite);
+    border: 2px solid var(--btnRed);
+    color: var(--btnRed);
+    transition: 0.7s;
+}
+
+.cancelBtn:hover{
+    transition: 0.7s;
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+.greyBtn{
+    height: 30px;
+    background: var(--btnWhite);
+    border: 2px solid var(--btnGrey);
+    color: var(--btnGrey);
+    border-radius: 5px;
+}
+
+.profilPage{
+    display: grid;
+    row-gap: 15px;
+    column-gap: 15px;
+    grid-template-columns: 400px minmax(300px,800px);
+    grid-template-areas: 
+    "data history";
+    padding: 50px 50px 50px 0px;
+    justify-content: center;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+@media(max-width: 900px) {
+    .profilPage{
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "data"
+    "history";
+    padding: 15px;
+    justify-content: center;
+    }
+    .dataPart{
+        margin: 20px auto;
+    }
+}
+
+/* ============================================= */
+
+.dataPart{
+    border: 3px solid var(--borderSecond);
+    box-shadow: 0 0 5px var(--borderSecond);
+    width: 400px;
+    grid-area: data;
+    background: var(--backgroundSecond);
+    border-radius: 5px;
+    padding: 10px;
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title title title"
+    "img nick nick nick"
+    "btnsDiv btnsDiv btnsDiv btnsDiv"
+    "inputs inputs inputs inputs";
+}
+
+
+
+.dataTitle{
+    grid-area: title;
+}
+
+.dataPhoto{
+    grid-area: img;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    
+}
+.dataNick{
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-top: 20px;
+}
+:root{
+    --btnPhotoRadius:5px;
+    --btnPhotoBorder:2px solid var(--btnBlue);
+    --btnPhotoHeight:30px;
+
+    --btnNickRadius:5px;
+    --btnNickBorder:2px solid var(--btnBlue);
+    --btnNickHeight:30px;
+
+    --btnPassRadius:5px;
+    --btnPassBorder:2px solid var(--btnBlue);
+    --btnPassHeight:30px;
+
+}
+
+.btnsDiv{
+    grid-area: btnsDiv;
+}
+
+.dataBtnPhoto{
+    grid-area: btnPhoto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: var(--btnPhotoRadius);
+    border-bottom-right-radius: var(--btnPhotoRadius);
+    border: 2px solid var(--btnBlue);
+    border-bottom: var(--btnPhotoBorder);
+    height: var(--btnPhotoHeight);
+    z-index: 2;
+    color: var(--btnBlue);
+    background-color: var(--btnWhite);
+}
+.dataBtnPhoto:hover{
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+}
+.dataBtnNick{
+    grid-area: btnNick;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: var(--btnNickRadius);
+    border-bottom-right-radius: var(--btnNickRadius);
+    border: 2px solid var(--btnBlue);
+    border-bottom: var(--btnNickBorder);
+    height: var(--btnNickHeight);
+    z-index: 2;
+    color: var(--btnBlue);
+    background-color: var(--btnWhite);
+}
+.dataBtnNick:hover{
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+
+}
+.dataBtnPass{
+    grid-area: btnPass;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: var(--btnPassRadius);
+    border-bottom-right-radius: var(--btnPassRadius);
+    border: 2px solid var(--btnBlue);
+    border-bottom: var(--btnPassBorder);
+    height: var(--btnPassHeight);
+    z-index: 2;
+    color: var(--btnBlue);
+    background-color: var(--btnWhite);
+}
+.dataBtnPass:hover{
+    background: var(--btnBlue);
+    color: var(--btnWhite);
+}
+
+
+
+.dataBtnDel{
+    grid-area: btnDel;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--btnRed);
+    color: var(--btnRed);
+    background: var(--btnWhite);
+    transition: 0.4s;
+}
+.dataBtnDel:hover{
+    transition: 0.4s;
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+
+.photoInput{
+    grid-area: inputs;
+    border:2px solid var(--btnBlue);
+    width: 100%;
+    z-index: 1;
+    margin-top: -12px;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+}
+
+.photoLeft{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas: 
+    "title title"
+    "input input"
+    "btnsDiv btnsDiv";
+    margin-right: 8px;
+    width: 180px;
+}
+
+.photoLeft h6{
+    grid-area: title;
+    font-size: 15px;
+    text-align: center;
+}
+
+.photoLeft input{
+    grid-area: input;
+    background: var(--inputAndInputBtnBackground);
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+}
+
+
+.photoRight{
+    border-left: 2px var(--btnBlue) solid;
+    padding-left: 8px;
+    width: 120px;
+    margin: 10px auto;
+}
+
+.photoRight h6{
+    font-size: 10px;
+    text-align: center;
+}
+.photoRight img{
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+/* ============================================= */
+
+.nickInput{
+    grid-area: inputs;
+    border:2px solid var(--btnBlue);
+    width: 100%;
+    z-index: 1;
+    margin-top: -12px;
+    border-radius: 5px;
+}
+.nickInput h5{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.nickInput input{
+    margin: auto;
+    background: var(--inputAndInputBtnBackground);
+    display: block;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+}
+
+
+.nickInput div div{
+    color: var(--infoColorRed);
+    background: var(--backgroundSecond);
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* ============================================ */
+
+.passInputs{
+    grid-area: inputs;
+    border:2px solid var(--btnBlue);
+    width: 100%;
+    z-index: 1;
+    margin-top: -12px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    padding: 5px;
+}
+.passInputs input{
+    width: 200px;
+    margin: auto;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+
+.passInputs h6{
+    font-size: 15px;
+}
+
+
+.currentPass{
+    display: flex;
+    flex-direction: column;
+}
+
+.currentPass h8{
+    font-size: 14px;
+    color: var(--btnRed);
+}
+
+.newPassPart{
+    background: var(--btnBlue);
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.newPassPart div{
+    display: flex;
+    flex-direction: column;    
+}
+
+:root{
+    --passLvlColor:var(--infoColorRed);
+}
+
+.newPassPart h8{
+    font-size: 12px;
+    color: var(--passLvlColor);
+}
+.newPassPart h6{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.newPassPart h7{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color:var(--infoColorRed)
+}
+
+/* =========================Profil=============================== */
+/* =========================Histor=============================== */
+
+
+.historyPart{
+    grid-area: history;
+    background: var(--backgroundFirst);
+    border: 3px solid var(--borderFirst);
+    box-shadow: 0px 0px 5px var(--borderFirst);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 10px;
+}
+.historyLoadingPage{
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.historyPart h4{
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--borderFirst)
+}
+
+.historyEmpty{
+    padding-top: 30px;
+}
+.itemTop{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.itemTop div{
+    font-weight: bold;
+}
+.itemTop button{
+    border: 2px solid var(--btnRed);
+    border-radius: 5px;
+    background: var(--btnWhite);
+    color: var(--btnRed);
+    transition: 0.7s;
+}
+.itemTop button:hover{
+    background: var(--btnRed);
+    color: var(--btnWhite);
+}
+
+
+.historySingleBasket{
+    background: var(--backgroundThird);
+    border:2px solid var(--borderThird);
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 10px;
+
+}
+
+.historySingleItemDeleted{
+    border: 2px solid var(--borderCards);
+    background: var(--backgroundCards);
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.historySingleItem{
+    border: 2px solid var(--borderCards);
+    background: var(--backgroundCards);
+    margin: 2px auto;
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 60px 1fr 100px;
+    grid-template-areas: 
+    "photo title price"
+    ". ratingTxt rating";
+    column-gap: 5px;
+}
+
+.historySingleItem img{
+    grid-area: photo;
+    height: 50px;
+    width: 50px;
+}
+.historySingleItemTitle{
+    grid-area: title;
+}
+.historySingleItemPrice{
+    grid-area: price;
+}
+.historySingleItemTxt{
+    grid-area: ratingTxt;
+    color: var(--infoColorGreen);
+    display: flex;
+    justify-content: end;
+}
+
+.historySingleItemRating{
+    grid-area: rating;
+}
+
+
+.historySingleItemRatio{
+    grid-area: rating;
+}
+
+.historySingleItemRatio{
+    transform: rotateY(180deg) ;
+    display: flex;
+}
+.historySingleItemRatio input{
+    display: none;
+}
+
+.historySingleItemRatio label{
+    display: block;
+    cursor: pointer;
+    width: 15px;
+}
+
+.historySingleItemRatio label::before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 15px;
+    margin: 0px 5px;
+    color: rgb(51, 51, 51);
+} 
+
+.historySingleItemRatio label::after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    top: 0;
+    margin: 0px 5px;
+    color: rgb(248, 252, 8);
+    opacity: 0;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+} 
+
+.historySingleItemRatio label:hover::after,
+.historySingleItemRatio label:hover ~label::after,
+.historySingleItemRatio input:checked ~ label::after {
+    opacity: 1;
+}
+/* =======================History========================= */
+/* =======================Empty========================= */
+.emptyPart{
+    grid-area: empty;
+    background:var(--backgroundSecond);
+    border: 3px solid var(--borderSecond);
+    box-shadow: 0px 0px 5px var(--borderSecond);
+    border-radius: 5px;
+}

@@ -1,0 +1,99 @@
+@import "../.././colors.css" ;
+
+.cantBuyBody{
+    margin: 100px auto;
+    background: var(--backgroundModals);
+    width: 450px;
+    border: 3px solid var(--borderModals);
+    border-radius: 5px;
+    position:relative;
+}
+.cantBuyBody h4{
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: var(--borderModals);
+}
+.cantBuyNeed{
+    background: var(--borderModals);
+    border-right: 2px var(--backgroundModals) solid;
+    border-top-left-radius: 5px;
+    position: absolute;
+    top:52px;
+    right:88px;
+    width: 88px;
+    text-align: center;
+    font-size: 13px;
+}
+.cantBuyHave{
+    background: var(--borderModals);
+    border-top-right-radius: 5px;
+    position: absolute;
+    top:52px;
+    right:5px;
+    width: 83px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.cantBuySingleItem{
+    background: var(--backgroundModals);
+    display: grid;
+    margin-bottom: 2px;
+    padding: 3px;
+    grid-template-columns: 1fr 5fr 90px 85px;
+}
+
+.cantBuySingleItem img{
+    height: 50px;
+    width: 50px;
+}
+
+.cantBuySingleItem h5{
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.cantBuySingleItem div{
+    text-align: center;
+    padding-top: 15px
+}
+
+.needValue{
+    border-right: solid 2px var(--borderModals);
+    border-left: 2px var(--borderModals);
+}
+
+.cantBuyBtns{
+    border-top: 2px solid var(--borderModals);
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cantBuyOkBtn{
+    border-radius: 5px;
+    border:2px solid var(--btnGreen);
+    color: var(--btnGreen);
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.cantBuyOkBtn:hover{
+    background:var(--btnGreen) ;
+    color: var(--btnWhite);
+}
+
+.cantBuyChangeBtn{
+    border-radius: 5px;
+    border:2px solid var(--btnBlue);
+    color: rgb(71, 152, 163);
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+.cantBuyChangeBtn:hover{
+    background:var(--btnBlue) ;
+    color: var(--btnWhite);
+}

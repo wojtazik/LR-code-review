@@ -1,0 +1,328 @@
+@import "../.././colors.css" ;
+
+
+.basketPage{
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    "basket advertisement";
+}
+
+/* ======================================================== */
+/* ======================================================== */
+
+.advertisement{
+    grid-area: advertisement;
+    border: 3px solid var(--borderSecond) ;
+    background: var(--backgroundSecond);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+    width: 120px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    padding: 2px;
+}
+.advertisement button{
+    border: none;
+    margin: 1px;
+}
+
+.advertisement img{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+/* ======================================================== */
+/* ======================================================== */
+
+.basketPart{
+    border: 3px solid var(--borderFirst);
+    box-shadow: 0px 0px 5px var(--borderFirst);
+    background: var(--backgroundFirst);
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 85%;
+    grid-area: basket;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.clearBtn{
+    position: absolute;
+    top:0px;
+    border: 5px solid var(--borderFirst);
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--borderFirst);
+    margin-left: 60%;
+    width: 140px;
+    text-align: center;
+    }
+
+.clearBtn button{
+    border-radius: 3px;
+    border: 2px solid var(--btnWhite);
+    margin: 1px;
+    margin-top: 3px;
+    background: var(--btnWhite);
+    color: var(--borderFirst);
+    transition: 0.7s;
+}
+.clearBtn button:hover{
+    color: var(--btnWhite);
+    background: var(--borderFirst);
+    transition: 0.7s;
+}
+
+
+.singleItem{
+    border: 2px solid var(--borderCards);
+    background: var(--backgroundCards);
+    margin: 10px auto;
+    padding: 5px;
+    width: 95%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 150px 300px 1fr 1fr 50px;
+    grid-template-areas: 
+    "img title value sumPrice del"
+    "img title value sumPrice del"
+    "img title value sumPrice del"
+    "img price value sumPrice del";
+}
+
+.itemPhoto{
+    grid-area: img;
+    height: 90px;
+    width: 90px;
+    margin: auto;
+}
+.photoBtn{
+    border: none;
+    background: var(--btnWhite);
+}
+
+
+.itemTitle{
+    grid-area: title;
+    text-align: center;
+}
+
+
+
+.itemPrice{
+    grid-area: price;
+    text-align: center;
+}
+
+.itemValue{
+    grid-area: value;
+    justify-content: center;
+    display: grid;
+    margin: auto;
+    height: 64px;
+    grid-template-columns: 60px 30px;
+    grid-template-rows: 30px 30px;
+    grid-template-areas: 
+    "input add"
+    "input min";
+}
+
+.itemValue input{
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+    grid-area: input;
+    text-align: center;
+}
+
+.addBtn{
+    grid-area: add;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+.addBtn img{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.minBtn{
+    grid-area: min;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+.minBtn img{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+.itemSumPrice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sumPrice;
+    text-align: center;
+}
+
+.itemDel{
+    grid-area: del;
+    border-radius: 5px;
+    border: 2px var(--btnRed) solid;
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.itemDel:hover{
+    background: var(--btnRed);
+    border: 2px solid var(--btnRed);
+    transition: 0.7s;
+}
+
+.itemDel img{
+    height: 25px;
+    width: 25px;
+} 
+.buyPart{
+    border-top: var(--btnGreen) 2px solid;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 25px auto 5px auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.buyPart button{
+
+    height: 30px;
+    background: var(--btnWhite);
+    border: 2px solid var(--btnGreen);
+    color: var(--btnGreen);
+    transition: 0.7s;
+    border-radius: 5px;
+}
+.buyPart button:hover{
+    background: var(--btnGreen);
+    color: var(--btnWhite);
+}
+.buyPart div{
+    color: var(--btnGreen);
+}
+
+@media (max-width: 1000px) {
+
+    .basketPage{
+        display: grid;
+        grid-template-rows: 150px auto;
+        grid-template-areas: 
+        "reklama"
+        "basket";
+    }
+    .reklama{
+        grid-area: reklama;
+        border: 2px solid var(--borderSecond) ;
+        border-radius: 5px;
+        width: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        padding: 3px;
+        margin: auto;
+        position: unset;
+    }
+
+    .reklama h4{
+        display: none;
+    }
+
+    .basketPart{
+        border: 3px solid  var(--borderFirst);
+        border-left: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 95%;
+        grid-area: basket;
+        position: relative;
+        padding-top: 50px;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+
+    .basketPage{
+        display: grid;
+        grid-template-rows: 150px auto;
+        grid-template-areas: 
+        "reklama"
+        "basket";
+    }
+
+    .basketPart{
+        border: 3px solid var(--borderFirst);
+        border-left: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 90%;
+        grid-area: basket;
+        position: relative;
+        padding-top: 50px;
+    }
+    
+    .singleItem{
+        border: 1px solid var(--borderThird);
+        margin: 5px auto;
+        padding: 5px 5px 20px 5px;
+        width: 90%;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas: 
+        "img title title title "
+        "price value sumPrice del";
+    }
+
+    .itemValue{
+        grid-area: value;
+        justify-content: center;
+        display: grid;
+        padding-top: 5px;
+        grid-template-columns: 50px 25px;
+        grid-template-rows: 25px 25px;
+        grid-template-areas: 
+        "input add"
+        "input min";
+    }
+
+    .itemSumPrice{
+        padding-top: 15px;
+        grid-area: sumPrice;
+        text-align: center;
+    }
+
+    .itemPrice{
+        grid-area: price;
+        text-align: center;
+        padding-top: 20px;
+    }
+  }
+

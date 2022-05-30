@@ -1,0 +1,287 @@
+@import "../.././colors.css" ;
+
+
+
+.loadingPage{
+    display: block;
+    margin: 50px auto;
+}
+
+.bodyOffert{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.menu{
+    border-top: 3px solid var(--borderSecond);
+    border-right: 3px solid var(--borderSecond);
+    border-bottom: 3px solid var(--borderSecond);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: var(--backgroundSecond);
+    box-shadow: 0 0 5px var(--borderSecond);
+    min-width: 150px;
+    padding: 20px 5px;
+}
+.menu h4{
+    text-align: center;
+}
+
+.typeCategory{
+    display: grid;
+    row-gap: 20px;
+}
+.typeCategory input{
+    height: 25px;
+    width: 25px;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+.singleCategory{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.singleCategory input{
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+}
+
+.priceCategory{
+    text-align: center;
+}
+.priceCategory input{
+    height: 30px;
+    width: 50px;
+    margin: 5px;
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+    background: var(--inputAndInputBtnBackground);
+}
+.priceCategoryInfo{
+    color: var(--infoColorRed);
+    text-align: center;
+}
+
+
+.offertPart{
+    box-shadow: 0 0 5px var(--borderFirst);
+    border-top: 3px solid var(--borderFirst);
+    border-left: 3px solid var(--borderFirst);
+    border-bottom: 3px solid var(--borderFirst);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--backgroundFirst);
+    padding: 50px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    position: relative;
+}
+
+.sortPart{
+    position: absolute;
+    border-bottom: 1px solid var(--borderOffert);
+    border-left: 1px solid var(--borderFirst);
+    border-right: 1px solid var(--borderFirst);
+    box-shadow: 0 0 5px var(--borderFirst);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0px 150px;
+    width: 170px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--borderFirst);
+    
+}
+.sortPart button{
+    border: 2px solid var(--borderFirst);
+    background: var(--btnWhite);
+    margin: auto;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+.sortPart button:hover{
+    background: var(--borderFirst);
+    border:var(--btnWhite) 2px solid;
+    transition: 0.7s;
+}
+
+.offertCard{
+    border: 2px solid var(--borderCards);
+    background: var(--backgroundCards);
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px;
+    grid-template-areas:
+    "photo photo title title"
+    "photo photo title title"
+    "photo photo title title"
+    "photo photo price price "
+    "valueInfo valueInfo btn1 btn1 "
+    "yourRating rating btn2 btn2 "
+    ;
+}
+
+.imageCard{
+    grid-area: photo;
+    text-align: center;
+}
+.imageCard img{
+    height: auto;
+    max-height: 250px;
+    max-width: 50%;
+    object-fit: contain;
+}
+
+
+
+.valueInfo0{
+    grid-area: valueInfo;
+    border: var(--infoColorGrey) 2px solid;
+    color: var(--infoColorGrey);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+}
+.valueInfoLittle{
+    grid-area: valueInfo;
+    border: var(--infoColorRed) 2px solid;
+    color: var(--infoColorRed);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+
+}
+.valueInfoAvrage{
+    grid-area: valueInfo;
+    border: 2px solid var(--infoColorYellow);
+    color: var(--infoColorYellow);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px auto;
+    height: 30px;
+    width: 200px;
+}
+
+.titleOffertCard{
+    grid-area: title;
+    text-align: center;
+    font-size: 16px;
+    height: 100px;
+}
+
+.ratingOffertCard{
+    grid-area: rating;
+    text-align: center;
+}
+
+.ratingOffertCardvalue{
+    text-align: center;
+}
+
+.yourRatingOffertCard{
+grid-area: yourRating;
+text-align: center;
+}
+
+.priceOffertCard{
+    grid-area: price;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.btnDetails{
+    grid-area: btn1;
+    border: 2px solid var(--btnBlue);
+    border-radius: 5px;
+    height: 35px;
+    margin: 5px auto;
+    color: var(--btnBlue);
+    background: var(--btnWhite);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btnDetails:hover{
+    color: var(--btnWhite);
+    background: var(--btnBlue);
+    transition: 0.5s;
+}
+.btnAddToBasketOff{
+    grid-area: btn2;
+    border: 2px solid var(--btnGrey);
+    border-radius: 5px;
+    height: 35px;
+    margin: 5px auto;
+    color: var(--btnGrey);
+    background: var(--btnWhite);
+}
+.btnAddToBasketOn{
+    grid-area: btn2;
+    border: 2px solid var(--btnGreen);
+    border-radius: 5px;
+    height: 35px;
+    margin: 5px auto;
+    color: var(--btnGreen);
+    border-radius: 5px;
+    background: var(--btnWhite);
+    transition: 0.5s;
+}
+
+.btnAddToBasketOn:hover{
+    color: var(--btnWhite);
+    background: var(--btnGreen);
+    transition: 0.5s;
+}
+
+.warning{
+    grid-area: warning;
+}
+
+@media (max-width: 1050px){
+
+    .menu{
+        width: 300px;
+        padding: 20px 5px;
+        height: auto;
+    }
+
+    .bodyOffert{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 30px;
+    }
+
+    .offertPart{
+    margin-left: 20px;
+    padding: 40px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    }
+  
+}

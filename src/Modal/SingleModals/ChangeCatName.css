@@ -1,0 +1,91 @@
+@import "../.././colors.css" ;
+
+.changeNameBody{
+    background: var(--backgroundModals);
+    border:3px solid var(--borderModals);
+    border-radius: 5px;
+    height: 250px;
+    width: 400px;
+    margin: 80px auto;
+    border-radius: 5px;
+}
+
+.changeNameBody h2{
+    padding: 5px 5px;
+    text-align: center;
+    background: var(--borderModals);
+}
+
+.currentName h4, h5{
+    text-align: center;
+}
+
+
+.newNameCatPart{
+    border-top: var(--borderModals) 2px solid;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 140px 140px;
+    row-gap: 5px 2px 10px;
+    column-gap: 10px;
+    grid-template-areas:
+    "title title" 
+    "inp inp"
+    "length length"
+    "change cancel";
+}
+.newNameCatPart h4{
+    grid-area: title;
+    text-align: center;
+}
+
+.newNameCatPart input{
+    grid-area: inp;
+    background: var(--inputAndInputBtnBackground);
+    border: 1px solid var(--inputAndInputBtn);
+    border-radius: 5px;
+}
+.newNameCatPart div{
+    grid-area: length;
+    font-size: 10px;
+
+    text-align: center;
+}
+
+.ChangeBtn{
+    grid-area: change;
+    border-radius: 5px;
+    border:2px solid var(--btnGreen);
+    color:var(--btnGreen);
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+.ChangeBtn:hover{
+    color:var(--btnWhite);
+    background: var(--btnGreen);
+    transition: 0.7s;
+}
+.ChangeBtnGrey{
+    grid-area: change;
+    border-radius: 5px;
+    border:2px solid var(--btnGrey);
+    color:var(--btnGrey);
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.CancelBtn{
+    grid-area: cancel;
+    border-radius: 5px;
+    border:2px solid var(--btnRed);
+    color:var(--btnRed);
+    background: var(--btnWhite);
+    transition: 0.7s;
+}
+
+.CancelBtn:hover{
+    color:var(--btnWhite);
+    background: var(--btnRed);
+    transition: 0.7s;
+}
+

@@ -1,0 +1,75 @@
+@import ".././colors.css" ;
+.shadow{
+    box-shadow: 5px 5px 5px black;
+}
+.basketColor{
+    border-bottom: 2px var(--infoColorGreen) solid;
+}
+
+
+@media (max-width: 767px) {
+
+    .basketColor{
+        border-bottom: none;
+    }
+
+    .basketColor::after{
+        content: "";
+        border: 2px solid var(--infoColorGreen);
+        margin-right: 2px;
+    }
+
+
+}
+
+
+#navbarScrollingDropdown{
+    margin-right: 30px;
+}
+
+.userMenuBtn{
+    display: flex;
+    min-width: 60px;
+    padding: 3px;
+    border: 2px solid var(--btnBlue);
+    color: var(--btnBlue);
+    text-decoration: none;
+    background: var(--btnWhite);
+    border-radius: 5px;
+    transition: 0.7s;
+    line-height:28px
+}
+
+.userMenuBtn:hover{
+    background:var(--btnBlue) ;
+    color: var(--btnWhite);
+    
+}
+
+.userMenuBtn img{
+    margin-right: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 35px;
+    height: 30px;
+}
+.userBtns{
+    display: flex;
+    column-gap: 10px;
+}
+
+.logoutBtn{
+    min-width: 60px;
+    padding: 3px;
+    border: 2px solid var(--btnRed);
+    color: var(--btnRed);
+    background: var(--btnWhite);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.7s;
+    line-height:28px    
+}
+.logoutBtn:hover{
+    color: var(--btnWhite);
+    background: var(--btnRed);
+}
