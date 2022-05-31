@@ -125,7 +125,7 @@ const usersReducer = (state = users, action) =>
               }
             })
           }else if(x.basket.usedId.indexOf(action.itemId) < 0){
-          // dodaje nowy item bo niema go w koszyku
+          // dodaje nowy item bo nie ma go w koszyku
             return({...x,basket:{usedId:[...x.basket.usedId,action.itemId],items:[...x.basket.items,{itemId:action.itemId,value:1}]}})
           }
         }
@@ -213,9 +213,9 @@ const usersReducer = (state = users, action) =>
     }
     case 'acc-basket-del-offert': return {
       ...state, list: state.list.map(x =>
-      { console.log("to sie w ooglo kurwa dzieje?")
+      {
         if (x.basket.usedId.indexOf(action.itemId) >= 0) {
-          console.log("kasuje to id", x.id)
+
           return {
             ...x, basket: { usedId: x.basket.usedId.filter(x => x !== action.itemIdId),items:x.basket.items.filter(x => x.itemId!==action.itemId) }
         }
