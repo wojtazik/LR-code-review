@@ -220,7 +220,6 @@ const usersReducer = (state = users, action) =>
             ...x, basket: { usedId: x.basket.usedId.filter(x => x !== action.itemIdId),items:x.basket.items.filter(x => x.itemId!==action.itemId) }
         }
         } else {
-          console.log("zostawiam to id", x.id)
           return x
       }
     })}
